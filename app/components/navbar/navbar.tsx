@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrandHeading, BrandNameWrapper, NavBar, NavBarListItems, NavContent, NavbarList } from './styled';
 import Menu from '@/app/icons/menu';
 import { CloseIcon } from '@/app/icons/close';
 
 const Navbar = () => {
 
- 
-  const windowWidth = window.innerWidth;
+  
+  const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 577);
   const isMobile = windowWidth < 576;
   const [isNavCollapsed, setIsNavCollapsed] = useState(isMobile);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+     setWindowWidth(window.innerWidth);
+    }
+  },[]);
 
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
