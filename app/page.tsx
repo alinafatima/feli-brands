@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
       <main>
         <MainWrapper id="home">
-          <MainHeadingWrapper>Feli Brands</MainHeadingWrapper>
+          <MainHeadingWrapper>Feli Brands - Your One-Stop Shop for Personal Care</MainHeadingWrapper>
           <MainSubHeadingWrapper>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt

@@ -10,7 +10,7 @@ export const Category = ({name, image, price, description }: any) => {
           src={image}
           alt="Product Picture"
           style={{
-            width: '20vw',
+            width: '100%',
             height: '30vh',
           }}
         />

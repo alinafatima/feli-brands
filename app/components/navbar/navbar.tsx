@@ -1,10 +1,39 @@
-import React from 'react';
-import { NavBar, NavbarList } from './styled';
+import React, { useState } from 'react';
+import { BrandHeading, BrandNameWrapper, NavBar, NavBarListItems, NavContent, NavbarList } from './styled';
+import Menu from '@/app/icons/menu';
+import { CloseIcon } from '@/app/icons/close';
 
 const Navbar = () => {
+
+ 
+  const windowWidth = window.innerWidth;
+  const isMobile = windowWidth < 576;
+  const [isNavCollapsed, setIsNavCollapsed] = useState(isMobile);
+
+
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
     <NavBar>
+      <NavContent>
+        <BrandNameWrapper>
+        <BrandHeading>Feli</BrandHeading>
+         <BrandHeading>Brands</BrandHeading>
+        </BrandNameWrapper>
+        {isNavCollapsed && isMobile ? 
+      (<button style={{
+          background: 'none', 
+          border: 'none',
+          padding: 0,
+          margin: 0,
+          marginRight: '1vw'
+
+        }} onClick={handleNavCollapse}> 
+          <Menu/>
+        </button>): null}
+      </NavContent>
       <NavbarList>
+        {  !isMobile || (!isNavCollapsed && isMobile) ? 
+        (<NavBarListItems>
         <li className="navbar-item">
           <a href="#home">Home</a>
         </li>
@@ -17,7 +46,20 @@ const Navbar = () => {
         <li className="navbar-item">
           <a href="#contact">Contact</a>
         </li>
+        </NavBarListItems>
+      ): null }
       </NavbarList>
+      {!isNavCollapsed && isMobile ? 
+      (<button style={{
+          background: 'none', 
+          border: 'none',
+          padding: 0,
+          margin: 0,
+          marginRight: '1vw'
+
+        }} onClick={handleNavCollapse}> 
+          <CloseIcon/>
+        </button>): null}
    </NavBar>
   );
 };

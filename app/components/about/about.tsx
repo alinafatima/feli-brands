@@ -3,26 +3,29 @@ import Image from "next/image";
 import React from "react";
 import { SectionWrapper } from "../../styled";
 import { AboutContentWrapper, AboutInfoWrapper, AboutWrapper, ImageWrapper } from "./styled";
+import arif from './../../../public/arif.jpg';
 
 export const About = () => {
   return (
-    <SectionWrapper id="about" backgroundColor="rgba(167, 143, 3, 0.1)">
+    <SectionWrapper id="about" backgroundColor="white">
       <AboutWrapper>
         <h2>Our Story</h2>
         <AboutContentWrapper>
               <ImageWrapper>
               <Image
-                src={'/arif.jpg'}
-                alt="Muhammad Arif picture"
-                width={500}
-                height={600}
-              />
+              src={arif}
+              alt="Muhammad Arif picture"
+              style={{
+                width: '100%',
+                height: '100%',
+              }}          />
             </ImageWrapper>
           <AboutInfoWrapper>
-            <h2>Muhammad Arif</h2>
+            <h2>Muhammad Arif - Founder & CEO</h2>
             <br></br>
-            <h2>Founder & CEO</h2>
-            <br></br>
+            <div style={{
+              color: 'black',
+            }}>
             <p>
               Welcome to Feli Brands, your trusted source for high-quality
               cooking essentials and versatile natural products. We are
@@ -37,6 +40,7 @@ export const About = () => {
               commitment to sustainable practices drive our mission to deliver
               quality products to our customers.
             </p>
+            </div>
             <br></br>
           </AboutInfoWrapper>
         </AboutContentWrapper>

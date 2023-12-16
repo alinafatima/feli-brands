@@ -1,8 +1,8 @@
-import mustardOilPic from './../../public/mustard-oil.jpg';
-import coconutOilPic from './../../public/coconut-oil.jpg';
-import flourBagPic from './../../public/flour-bag.jpg';
-import desiGheePic from './../../public/desi-ghee.jpg';
-import razorMenPic from './../../public/razor-men.jpeg';
+import mustardOilPic from './../../public/mustard-oil.png';
+import coconutOilPic from './../../public/coconut-oil.png';
+import flourBagPic from './../../public/flour1.png';
+import desiGheePic from './../../public/perfume.png';
+import razorMenPic from './../../public/razor.png';
 import razorWomenPic from './../../public/razor-women.jpeg';
 
 export const categories = [
@@ -32,11 +32,11 @@ export const categories = [
   },
   {
     id: 4,
-    name: 'Desi Ghee',
+    name: 'Perfume',
     image: desiGheePic,
     price: 'Rs. 1000',
     description:
-      'Authentic and rich, our premium desi ghee brings out the true essence of Indian cuisine.',
+      'A luxurious blend of exotic jasmine and warm vanilla, designed to captivate and enchant',
   },
 ];
 

@@ -6,7 +6,7 @@ import { CategoriesWrapper, MainHeadingWrapper } from './styled';
 
 export const Products= () => {
   return (
-    <SectionWrapper id="products" backgroundColor="#F7F7F7">
+    <SectionWrapper id="products" backgroundColor="white">
         <MainHeadingWrapper>Organic Products</MainHeadingWrapper>
       <CategoriesWrapper>
         {categories.map((category, i) => {

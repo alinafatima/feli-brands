@@ -8,7 +8,7 @@ import { SocialMediaIconWrapper, SocialMediaWrapper } from './styled';
 
 const Contact = () => {
   return (
-    <SectionWrapper id="contact" backgroundColor="#F7F7F7" height="50vh">
+    <SectionWrapper id="contact" backgroundColor="rgb(244, 248, 253)" height="50vh">
       <h1>Have questions? Let's get in touch.</h1>
       <SocialMediaWrapper>
         <SocialMediaIconWrapper>

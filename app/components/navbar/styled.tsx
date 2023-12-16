@@ -8,14 +8,54 @@ export const NavBar = styled.nav`
   width: 100vw;
   z-index: 10;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.25);
+  background: white;
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+export const NavContent = styled.div`
+  display:  flex;
+  width: 100vw;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const NavbarList = styled.ul`
   display: flex;
-  flex: 1;
   flex-direction: row;
   list-style: none;
-  justify-content: flex-end;
+  align-items: center;
   margin-right: 1vw;
+
+  
 `;
+
+export const BrandNameWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: Poppins,sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0.5vw;
+  font-size: 1.2rem;
+  margin-left: 2.5vw;
+`
+
+export const BrandHeading = styled.h1`
+  text-align: left;
+  align-self: flex-start;
+`
+
+export const NavBarListItems = styled.div`
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+`

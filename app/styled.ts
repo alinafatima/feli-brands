@@ -6,15 +6,29 @@ interface ISectionWrapper {
 }
 
 export const MainWrapper = styled.div`
-  background-image: url(/mustard-field.jpeg);
+  background-image: url(/background-image.png);
   display: flex;
   width: 100vw;
   height: 100vh;
-  justify-content: center;
-  align-content: center;
-  align-self: center;
+  justify-content: flex-start;
   background-size: cover;
   background-position: center;
+
+  &::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1; 
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
 `;
 
 export const SectionWrapper = styled.div<ISectionWrapper>`
@@ -25,18 +39,22 @@ export const SectionWrapper = styled.div<ISectionWrapper>`
 `;
 
 export const CategoryWrapper = styled.div`
-  background-color: rgba(167, 143, 3, 0.1);
-  color: #484a09;
+  background-color: #F4F8FD; 
   width: 20vw;
   border-radius: 5px;
   justify-content: center;
   align-content: center;
   margin: 1vw;
-  box-shadow: 5px 5px 8px rgba(72, 74, 9, 0.6);
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
 
   &:hover {
     transform: translateY(40px);
     transition: transform 0.3s ease-out;
+  }
+
+  @media (max-width: 576px) {
+    width: 95%;
+    margin: 1vh;
   }
 `;
 
@@ -46,28 +64,35 @@ export const AppWrapper = styled.div`
 `;
 
 export const MainHeadingWrapper = styled.h1`
-  text-align: center;
+  text-align: left;
   margin: 4vw;
   color: white;
   position: absolute;
   top: 37%;
-  left: 47%;
+  left: 30%;
   transform: translate(-50%, -50%);
-  font-size: 6rem;
-  font-family: serif;
+  font-size: 4rem;
+  font-family: Poppins, sans-serif;
+  font-weight: 800;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  @media (max-width: 576px) {
+    font-size: 2rem;
+  }
 `;
 
 export const MainSubHeadingWrapper = styled.p`
-  text-align: center;
+  text-align: left;
   margin: 5vw;
   color: white;
   position: absolute;
-  top: 50%;
-  left: 47%;
+  top: 60%;
+  left: 29%;
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
-  font-family: serif;
+  font-family: Poppins, sans-serif;
+  @media (max-width: 576px) {
+    font-size: 1rem;
+  }
 `;
 
 export const SectionsWrappper = styled.div`

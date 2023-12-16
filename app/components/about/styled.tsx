@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const AboutWrapper = styled.div`
- background-color: #484a09;
- color: #FFF8DE;
+ background-color: rgb(244, 248, 253);
+ color: black;
  flex: 1;
+ padding: 5vh;
 `;
 
 export const AboutContentWrapper= styled.div`
@@ -12,8 +13,11 @@ export const AboutContentWrapper= styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #484a09;
-  color: #fff8de;
+  background-color: rgb(244, 248, 253);
+  color: #2270E2;
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -24,8 +28,12 @@ export const ImageWrapper = styled.div`
   width: 30vw;
   height: 50vh;
   justify-content: flex-end;
-  border: 5px solid #484a09;
+  border: 5px solid  #2270E2;
   border-radius: 50%;
+  @media (max-width: 576px) {
+    width: 85vw;
+    margin: 1vw;
+  }
 `;
 
 
