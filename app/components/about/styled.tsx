@@ -11,10 +11,11 @@ export const AboutContentWrapper= styled.div`
   margin: 2vw;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: rgb(244, 248, 253);
   color: #2270E2;
+  align-items: flex-start;
   @media (max-width: 576px) {
     flex-direction: column;
   }
@@ -24,21 +25,41 @@ export const ImageWrapper = styled.div`
   display: flex;
   overflow: hidden;
   margin: 2vh;
-  display: flex;
+  flex: 1;
   width: 30vw;
   height: 50vh;
-  justify-content: flex-end;
-  border: 5px solid  #2270E2;
-  border-radius: 50%;
+  justify-content: center;
   @media (max-width: 576px) {
-    width: 85vw;
-    margin: 1vw;
+    width: 65vw;
+    margin: 0.5vw;
   }
 `;
 
 
 export const AboutInfoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   flex: 1;
   text-align: left;
-  padding-right: 2vw;
+  padding: 2vw;
+  align-items: flex-start;
+  @media (max-width: 576px) {
+    align-items: center;
+  }
+`;
+
+export const AboutHeadingWrapper = styled.h2`
+  text-align: left;
+
+  @media (max-width: 576px) {
+    text-align: center;
+  }
+`;
+
+export const AboutDetailWrapper = styled.p`
+  text-align: left;
+
+  @media (max-width: 576px) {
+    text-align: center;
+  }
 `;

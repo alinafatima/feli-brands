@@ -16,9 +16,13 @@ export const CategoryHeading = styled.h3`
   }
 `;
 
-export const CategoryDescription = styled.p`
+interface ICategoryDescription {
+  color: string;
+}
+
+export const CategoryDescription = styled.p<ICategoryDescription>`
   margin: 1vw;
-  color: black;
+  color: ${props => props.color};
   font-weight: 400;
   @media (max-width: 576px) {
     margin: 2vh;

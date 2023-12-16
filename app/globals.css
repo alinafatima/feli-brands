@@ -40,6 +40,10 @@ li a{
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
+  &:hover {
+    color: #2270E2;
+  }
+ 
 }
 
 div a {

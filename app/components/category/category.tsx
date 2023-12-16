@@ -18,10 +18,10 @@ export const Category = ({name, image, price, description }: any) => {
       <CategoryHeading>
         {name}
       </CategoryHeading>
-        <CategoryDescription>
+        <CategoryDescription color="black">
         {price}
       </CategoryDescription>
-     <CategoryDescription>
+     <CategoryDescription color="black">
         {description}
       </CategoryDescription>
     </CategoryWrapper>
